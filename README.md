@@ -16,4 +16,6 @@ Named after the punk band.
 
 ### Example transcribing audio file
 
+```bash
 whisper ./audio/{filename} --output_dir ./transcription --output_format txt
+```

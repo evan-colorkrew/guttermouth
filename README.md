@@ -5,6 +5,7 @@ Named after the punk band.
 ## Dependencies
 
 - debian
+- docker
 - ffmpeg
 - git
 - python3

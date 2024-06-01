@@ -1,0 +1,11 @@
+name: guttermouth
+services:
+  base:
+    build:
+      context: .
+      dockerfile: ./base.Dockerfile
+    tty: true
+    volumes:
+      - ../base:/home
+volumes:
+  guttermouth:

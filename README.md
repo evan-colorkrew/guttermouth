@@ -2,7 +2,7 @@
 Talk to text, PC and SFW.
 Named after the punk band.
 
-## AI dependencies
+## Dependencies
 
 - debian
 - ffmpeg

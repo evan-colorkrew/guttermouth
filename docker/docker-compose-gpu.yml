@@ -1,4 +1,5 @@
 services:
+  base:
     deploy:
       resources:
         reservations:

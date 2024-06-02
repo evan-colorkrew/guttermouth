@@ -4,13 +4,8 @@ services:
     build:
       context: .
       dockerfile: ./base.Dockerfile
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: 1
-              capabilities: [gpu]
+    env_file:
+      - ../.env
     tty: true
     volumes:
       - ../base:/home

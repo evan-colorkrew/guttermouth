@@ -6,11 +6,22 @@ RUN apt-get update && apt-get install -y \
     curl \
     ffmpeg \
     git-all \
+    git-lfs \
     python3 \
     python3-pip
 
-# Install OpenAI Whisper
-RUN pip install -U openai-whisper --break-system-packages
+# Install Python packages
+RUN pip install -U \
+    huggingface_hub \
+    torch \
+    torchvision \
+    openai-whisper \
+    --break-system-packages
+
+# Install Mistral Inference
+RUN pip install -U \
+    mistral_inference \
+    --break-system-packages
 
 # Install NVIDIA Container Toolkit
 RUN curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
@@ -22,3 +33,8 @@ RUN apt-get update && apt-get install -y \
     nvidia-container-toolkit
 
 RUN nvidia-ctk runtime configure --runtime=docker
+
+# Entrypoint
+COPY ./base-entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+ENTRYPOINT sh /entrypoint.sh

@@ -12,7 +12,21 @@ Named after the punk band.
 - python3-pip
 - [whisper](https://github.com/openai/whisper)
 
+## Setup
+
+```bash
+`sh ./start.sh`
+```
+
+First-time setup requires the Docker daemon to be restarted.
+
 ## Usage
+
+### Test GPU availability
+
+```bash
+nvidia-smi
+```
 
 ### Example transcribing audio file
 

@@ -37,4 +37,4 @@ RUN nvidia-ctk runtime configure --runtime=docker
 # Entrypoint
 COPY ./base-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT sh /entrypoint.sh
+ENTRYPOINT '/entrypoint.sh'

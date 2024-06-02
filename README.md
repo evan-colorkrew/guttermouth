@@ -16,19 +16,27 @@ Fill in missing values as necessary.
 
 ### Start containers
 
-With GPU (recommended).
+#### With GPU (recommended)
+
+First-time setup with GPU requires the Docker daemon to be restarted.
 
 ```bash
 `sh ./start-gpu.sh`
 ```
 
-Without GPU.
+#### Without GPU
 
 ```bash
 `sh ./start.sh`
 ```
 
-First-time setup requires the Docker daemon to be restarted.
+### Set up
+
+To prepare the container for usage, please run the following.
+
+```bash
+`sh ./setup.sh`
+```
 
 ## Usage
 
@@ -53,4 +61,4 @@ whisper ./audio/{filename} --output_dir ./transcription --output_format txt
 
 ## Notes
 
-- Make sure your HF personal access token has access to the used repos
+- Make sure your HF personal access token has access to the required repos

@@ -44,4 +44,4 @@ RUN chmod +x /setup.sh
 COPY ./base/setup-mistral-instruct.py /setup-mistral-instruct.py
 
 # Entrypoint
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT '/entrypoint.sh'

@@ -3,7 +3,7 @@ services:
   base:
     build:
       context: .
-      dockerfile: ./base.Dockerfile
+      dockerfile: ./base/Dockerfile
     env_file:
       - ../.env
     volumes:

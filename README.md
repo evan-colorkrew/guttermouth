@@ -4,7 +4,7 @@ Named after the punk band.
 
 ## Setup
 
-### Env vars
+### 1. Env vars
 
 Copy the _.env.example_ file in the project root and rename it to _.env_.
 
@@ -14,28 +14,32 @@ cp .env.example .env
 
 Fill in missing values as necessary.
 
-### Start containers
+### 2. Build images
 
-#### With GPU (recommended)
+#### GPU (recommended)
 
 First-time setup with GPU requires the Docker daemon to be restarted.
 
 ```bash
-`sh ./start-gpu.sh`
+`sh ./build.sh`
 ```
 
-#### Without GPU
+#### CPU
+
+```bash
+`sh ./build-cpu.sh`
+```
+
+### Run containers
 
 ```bash
 `sh ./start.sh`
 ```
 
-### Set up
-
-To prepare the container for usage, please run the following.
+#### CPU
 
 ```bash
-`sh ./setup.sh`
+`sh ./start-cpu.sh`
 ```
 
 ## Usage

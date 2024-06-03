@@ -34,7 +34,11 @@ RUN apt-get update && apt-get install -y \
 
 RUN nvidia-ctk runtime configure --runtime=docker
 
+# Copy scripts
+COPY ./base/entrypoint.sh /entrypoint.sh
+COPY ./base/setup.sh /setup.sh
+COPY ./base/setup-mistral-instruct.py /setup-mistral-instruct.py
+
 # Entrypoint
-COPY ./base-entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT '/entrypoint.sh'

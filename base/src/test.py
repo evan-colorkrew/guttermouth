@@ -1,3 +1,4 @@
+import time
 from mistral_inference.model import Transformer
 from mistral_inference.generate import generate
 

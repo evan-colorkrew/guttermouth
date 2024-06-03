@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: ./base/Dockerfile
-    entrypoint: ["/setup.sh"]
+    entrypoint: ["/entrypoint.sh"]
     env_file:
       - ../.env
     volumes:

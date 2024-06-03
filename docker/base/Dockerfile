@@ -36,9 +36,9 @@ RUN nvidia-ctk runtime configure --runtime=docker
 
 # Copy scripts
 COPY ./base/entrypoint.sh /entrypoint.sh
-COPY ./base/setup.sh /setup.sh
-COPY ./base/setup-mistral-instruct.py /setup-mistral-instruct.py
-
-# Entrypoint
 RUN chmod +x /entrypoint.sh
-ENTRYPOINT '/entrypoint.sh'
+
+COPY ./base/setup.sh /setup.sh
+RUN chmod +x /setup.sh
+
+COPY ./base/setup-mistral-instruct.py /setup-mistral-instruct.py

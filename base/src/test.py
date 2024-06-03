@@ -14,7 +14,7 @@ completion_request = ChatCompletionRequest(messages=[UserMessage(content="Explai
 
 tokens = tokenizer.encode_chat_completion(completion_request).tokens
 
-out_tokens, _ = generate([tokens], model, max_tokens=64, temperature=0.0, eos_id=tokenizer.instruct_tokenizer.tokenizer.eos_id)
+out_tokens, _ = generate([tokens], model, max_tokens=640, temperature=0.0, eos_id=tokenizer.instruct_tokenizer.tokenizer.eos_id)
 result = tokenizer.instruct_tokenizer.tokenizer.decode(out_tokens[0])
 
 print(result)
